@@ -7,7 +7,6 @@ public class StdInStdOutII {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int i = Integer.parseInt(scan.nextLine());
-        Integer.val
         double d = Double.parseDouble(scan.nextLine());
         String s = scan.nextLine();
 
