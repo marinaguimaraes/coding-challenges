@@ -11,21 +11,26 @@ public class JavaLoopsII {
             int b = in.nextInt();
             int n = in.nextInt();
 
-            int s = 0;
-            StringBuilder currentSeries = new StringBuilder();
-            for (int i=0; i<n; i++) {
-                if (i == 0) {
-                    s = a + (int) Math.pow(2, i) * b;
-                } else {
-                    s += (int) Math.pow(2, i) * b;
-                    currentSeries.append(" ");
-                }
-
-                currentSeries.append(s);
-            }
+            String currentSeries = getSeries(a, b, n);
 
             System.out.println(currentSeries);
         }
         in.close();
+    }
+
+    public static String getSeries(int a, int b, int n) {
+        int s = 0;
+        StringBuilder currentSeries = new StringBuilder();
+        for (int i = 0; i< n; i++) {
+            if (i == 0) {
+                s = a + (int) Math.pow(2, i) * b;
+            } else {
+                s += (int) Math.pow(2, i) * b;
+                currentSeries.append(" ");
+            }
+
+            currentSeries.append(s);
+        }
+        return currentSeries.toString();
     }
 }
