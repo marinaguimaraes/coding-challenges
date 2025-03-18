@@ -17,13 +17,33 @@ public class JavaStringsIntroductionTest {
     }
 
     @Test
-    public void testIsAGreaterThanB() {
+    public void testIsAGreaterThanBReturnFalse() {
         String a = "good";
         String b = "morning";
 
         boolean isAGreaterThanB = JavaStringsIntroduction.isAGreaterThanB(a,b);
 
         assertFalse(isAGreaterThanB);
+    }
+
+    @Test
+    public void testIsAGreaterThanBSameStrings() {
+        String a = "hello";
+        String b = "hello";
+
+        boolean isAGreaterThanB = JavaStringsIntroduction.isAGreaterThanB(a,b);
+
+        assertFalse(isAGreaterThanB);
+    }
+
+    @Test
+    public void testIsAGreaterThanBReturnTrue() {
+        String a = "zebra";
+        String b = "arara";
+
+        boolean isAGreaterThanB = JavaStringsIntroduction.isAGreaterThanB(a,b);
+
+        assertTrue(isAGreaterThanB);
     }
 
     @Test

@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class JavaStringsIntroduction {
     public static int sumLengths(String a, String b) {
-        return 0;
+        return a.length() + b.length();
     }
 
     public static boolean isAGreaterThanB(String a, String b) {
-        return false;
+        return a.compareTo(b) > 0;
     }
 
     public static String getStrFirstLetterUppercase(String a) {
-        return null;
+        return a.substring(0,1).toUpperCase() + a.substring(1);
     }
 
     public static void main(String[] args) {
@@ -20,5 +20,9 @@ public class JavaStringsIntroduction {
         String a = sc.next();
         String b = sc.next();
         sc.close();
+
+        System.out.println(sumLengths(a,b));
+        System.out.println(isAGreaterThanB(a,b) ? "Yes" : "No");
+        System.out.println(getStrFirstLetterUppercase(a) + " " + getStrFirstLetterUppercase(b));
     }
 }
