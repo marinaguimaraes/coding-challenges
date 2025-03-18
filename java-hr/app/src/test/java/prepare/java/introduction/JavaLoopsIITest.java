@@ -1,4 +1,4 @@
-package org.example;
+package prepare.java.introduction;
 
 import org.junit.Test;
 

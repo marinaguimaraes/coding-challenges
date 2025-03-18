@@ -1,7 +1,6 @@
-package org.example;
+package prepare.java.introduction;
 
 import java.util.*;
-import java.security.*;
 
 public class JavaIntToString {
 

@@ -1,4 +1,4 @@
-package org.example;
+package prepare.java.introduction;
 
 import java.text.NumberFormat;
 import java.util.Locale;
