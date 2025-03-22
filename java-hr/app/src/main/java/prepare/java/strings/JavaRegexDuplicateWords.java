@@ -10,6 +10,12 @@ public class JavaRegexDuplicateWords {
     // Then I realised the Hackerrank challenge had a pre-written code and a check for exact 3 modifications from
     // the main method, and now I don't want to remove removeDuplicateWords because I'd have to delete the tests.
     static String removeDuplicateWords(String input) {
+        /*
+        * \b start of word boundary
+        * \w+ any number of word characters
+        * (\s+\1\b)+ Any number of space followed by word which matches the previous word and ends the word boundary.
+        * Whole thing wrapped in + finds one or more repetitions.
+        * */
         String pattern = "\\b(\\w+)(\\s+\\1\\b)+";
         Pattern p = Pattern.compile(pattern, Pattern.CASE_INSENSITIVE);
 
