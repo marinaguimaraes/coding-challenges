@@ -25,7 +25,7 @@ public class JavaStack {
             if (current.equals('{') || current.equals('[') || current.equals('(')) {
                 stack.push(current);
             } else {
-                if (!stack.empty() && closesCorrectly(stack.peek(), current)) {
+                if (!stack.empty() && closeBracketMatchesOpenBracket(stack.peek(), current)) {
                     stack.pop();
                 } else {
                     return false;
@@ -36,7 +36,7 @@ public class JavaStack {
         return stack.empty();
     }
 
-    private static boolean closesCorrectly(Character peek, Character current) {
+    private static boolean closeBracketMatchesOpenBracket(Character peek, Character current) {
         return (peek.equals('{') && current.equals('}')) ||
                 (peek.equals('[') && current.equals(']')) ||
                 (peek.equals('(') && current.equals(')'));
