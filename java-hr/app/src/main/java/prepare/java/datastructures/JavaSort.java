@@ -2,11 +2,11 @@ package prepare.java.datastructures;
 
 import java.util.*;
 
-class Student{
+class JavaSortStudent{
     private int id;
     private String fname;
     private double cgpa;
-    public Student(int id, String fname, double cgpa) {
+    public JavaSortStudent(int id, String fname, double cgpa) {
         super();
         this.id = id;
         this.fname = fname;
@@ -23,10 +23,10 @@ class Student{
     }
 }
 
-class StudentComparator implements Comparator<Student> {
+class StudentComparator implements Comparator<JavaSortStudent> {
 
     @Override
-    public int compare(Student o1, Student o2) {
+    public int compare(JavaSortStudent o1, JavaSortStudent o2) {
         if (o1.equals(o2)) return 0;
         if (o1.getCgpa() == o2.getCgpa()) {
             int compareNames = o1.getFname().compareTo(o2.getFname());
@@ -46,22 +46,22 @@ public class JavaSort
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
 
-        List<Student> studentList = new ArrayList<Student>();
+        List<JavaSortStudent> studentList = new ArrayList<>();
         while(testCases>0){
             int id = in.nextInt();
             String fname = in.next();
             double cgpa = in.nextDouble();
 
-            Student st = new Student(id, fname, cgpa);
+            JavaSortStudent st = new JavaSortStudent(id, fname, cgpa);
             studentList.add(st);
 
             testCases--;
         }
 
-        Comparator<? super Student> studentComparator = new StudentComparator();
+        Comparator<? super JavaSortStudent> studentComparator = new StudentComparator();
         studentList.sort(studentComparator);
 
-        for(Student st: studentList){
+        for(JavaSortStudent st: studentList){
             System.out.println(st.getFname());
         }
     }

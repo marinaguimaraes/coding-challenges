@@ -11,13 +11,13 @@ public class JavaSortTest {
 
     @Test
     public void testSampleInput() {
-        Student rumpa = new Student(33, "Rumpa", 3.68);
-        Student ashis = new Student(85, "Ashis", 3.85);
-        Student samiha = new Student(56, "Samiha", 3.75);
-        Student samara = new Student(19, "Samara", 3.75);
-        Student fahim = new Student(22, "Fahim", 3.76);
+        JavaSortStudent rumpa = new JavaSortStudent(33, "Rumpa", 3.68);
+        JavaSortStudent ashis = new JavaSortStudent(85, "Ashis", 3.85);
+        JavaSortStudent samiha = new JavaSortStudent(56, "Samiha", 3.75);
+        JavaSortStudent samara = new JavaSortStudent(19, "Samara", 3.75);
+        JavaSortStudent fahim = new JavaSortStudent(22, "Fahim", 3.76);
 
-        List<Student> studentList = new ArrayList<>();
+        List<JavaSortStudent> studentList = new ArrayList<>();
 
         studentList.add(rumpa);
         studentList.add(ashis);
@@ -37,13 +37,13 @@ public class JavaSortTest {
 
     @Test
     public void testNeedsOrderingByID() {
-        Student rumpa = new Student(33, "Rumpa", 3.68);
-        Student ashis = new Student(85, "Ashis", 3.85);
-        Student samiha56 = new Student(56, "Samiha", 3.75);
-        Student samiha19 = new Student(19, "Samiha", 3.75);
-        Student fahim = new Student(22, "Fahim", 3.76);
+        JavaSortStudent rumpa = new JavaSortStudent(33, "Rumpa", 3.68);
+        JavaSortStudent ashis = new JavaSortStudent(85, "Ashis", 3.85);
+        JavaSortStudent samiha56 = new JavaSortStudent(56, "Samiha", 3.75);
+        JavaSortStudent samiha19 = new JavaSortStudent(19, "Samiha", 3.75);
+        JavaSortStudent fahim = new JavaSortStudent(22, "Fahim", 3.76);
 
-        List<Student> studentList = new ArrayList<>();
+        List<JavaSortStudent> studentList = new ArrayList<>();
 
         studentList.add(rumpa);
         studentList.add(ashis);
